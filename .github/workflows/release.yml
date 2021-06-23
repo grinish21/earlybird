@@ -22,12 +22,9 @@ jobs:
       - name: Upload artifacts
         uses: actions/upload-artifact@v2
         with:
-         - name: go-earlybird-linux
-           path: ./binaries/go-earlybird-linux
-         - name: go-earlybird-macos
-           path: ./binaries/go-earlybird
-         - name: go-earlybird.exe
-           path: ./binaries/go-earlybird.exe
+         - name: earlybird-binaries
+           path: ./binaries/
+           if-no-files-found: error
       - name: Bump version and push tag
         id: bump-version
         uses: anothrNick/github-tag-action@1.34.0
@@ -59,7 +56,7 @@ jobs:
       - name: Download earlybird artifacts
         uses: actions/download-artifact@v2
         with:
-          - name: go-earlybird-linux
+          - name: earlybird-binaries
       - name: Upload Linux Release Asset
         id: upload-linux
         uses: actions/upload-release-asset@v1
@@ -78,7 +75,7 @@ jobs:
       - name: Download earlybird artifacts
         uses: actions/download-artifact@v2
         with:
-          - name: go-earlybird-macos
+          - name: earlybird-binaries
       - name: Upload macOS Release Asset
         id: upload-macos
         uses: actions/upload-release-asset@v1
@@ -97,7 +94,7 @@ jobs:
       - name: Download earlybird artifacts
         uses: actions/download-artifact@v2
         with:
-          - name: go-earlybird.exe
+          - name: earlybird-binaries
       - name: Upload Windows Release Asset
         id: upload-windows
         uses: actions/upload-release-asset@v1
