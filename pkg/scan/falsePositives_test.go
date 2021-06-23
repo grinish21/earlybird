@@ -31,7 +31,7 @@ func Test_findFalsePositive(t *testing.T) {
 				Filename:   "source.java",
 				MatchValue: `password = "StrongFinding5813!"`,
 			},
-			wantIsFP: false,
+			wantIsFP: true,
 		},
 		{
 			name: "Skip false positive",
