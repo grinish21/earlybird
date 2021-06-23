@@ -1,5 +1,5 @@
 on:
-  push:
+  pull_request:
     branches: [ chore/testactions ]
 
 name: Build and run test on pullRequest
