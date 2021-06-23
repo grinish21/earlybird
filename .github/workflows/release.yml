@@ -35,7 +35,7 @@ jobs:
           INITIAL_VERSION: 2.0.0
   release:
     needs: build
-    name: Tag and Release
+    name: Release
     runs-on: ubuntu-latest
     outputs:
       upload_url: ${{ steps.create-release.outputs.upload_url }}
@@ -64,7 +64,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: ./binaries/go-earlybird-linux
+          asset_path: go-earlybird-linux
           asset_name: go-earlybird-linux
           asset_content_type: application/octet-stream
   publishmacOS:
@@ -83,7 +83,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: ./binaries/go-earlybird
+          asset_path: go-earlybird
           asset_name: go-earlybird-macos
           asset_content_type: application/octet-stream
   publishWindows:
@@ -102,6 +102,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ needs.release.outputs.upload_url }}
-          asset_path: ./binaries/go-earlybird.exe
+          asset_path: go-earlybird.exe
           asset_name: go-earlybird.exe
           asset_content_type: application/x-msdownload
