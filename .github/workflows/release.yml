@@ -57,9 +57,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download earlybird artifacts
-          uses: actions/download-artifact@v2
-          with:
-            - name: go-earlybird-linux
+        uses: actions/download-artifact@v2
+        with:
+          - name: go-earlybird-linux
       - name: Upload Linux Release Asset
         id: upload-linux
         uses: actions/upload-release-asset@v1
@@ -76,9 +76,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download earlybird artifacts
-          uses: actions/download-artifact@v2
-          with:
-            - name: go-earlybird-macos
+        uses: actions/download-artifact@v2
+        with:
+          - name: go-earlybird-macos
       - name: Upload macOS Release Asset
         id: upload-macos
         uses: actions/upload-release-asset@v1
@@ -95,9 +95,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Download earlybird artifacts
-          uses: actions/download-artifact@v2
-          with:
-            - name: go-earlybird.exe
+        uses: actions/download-artifact@v2
+        with:
+          - name: go-earlybird.exe
       - name: Upload Windows Release Asset
         id: upload-windows
         uses: actions/upload-release-asset@v1
