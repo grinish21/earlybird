@@ -23,6 +23,7 @@ jobs:
         env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
          WITH_V: true
+         RELEASE_BRANCHES: .*
          INITIAL_VERSION: 2.0.0
       - name: Create Release
         id: create-release
