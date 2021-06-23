@@ -24,11 +24,11 @@ jobs:
     steps:
       - name: Bump version and push tag
         id: bump-version
-        uses: anothrNick/github-tag-action@1.26.0
+        uses: anothrNick/github-tag-action@1.34.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           WITH_V: true
-          RELEASE_BRANCHES: main
+          RELEASE_BRANCHES: .*
           INITIAL_VERSION: 2.0.0
       - name: Create Release
         id: create-release
@@ -40,7 +40,7 @@ jobs:
           prerelease: false
   publishLinux:
     needs: [build, release]
-    name: publish
+    name: Publish Linux Asset
     runs-on: ubuntu-latest
     steps:
       - name: Upload Linux Release Asset
@@ -55,7 +55,7 @@ jobs:
           asset_content_type: application/octet-stream
   publishmacOS:
     needs: [build, release]
-    name: publish
+    name: Publish MacOS Asset
     runs-on: ubuntu-latest
     steps:
       - name: Upload macOS Release Asset
@@ -70,7 +70,7 @@ jobs:
           asset_content_type: application/octet-stream
   publishWindows:
     needs: [build, release]
-    name: publish
+    name: Publish Windows Asset
     runs-on: ubuntu-latest
     steps:
       - name: Upload Windows Release Asset
