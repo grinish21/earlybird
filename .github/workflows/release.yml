@@ -20,7 +20,7 @@ jobs:
       - name: Get version for next release
         id: getversion
         run: |
-          echo "::set-output name=earlybird_next_version::$(npx -p @semantic-release/changelog -p @semantic-release/git -p semantic-release@19.0.2 semantic-release --no-ci --dry-run"
+          echo "::set-output name=earlybird_next_version::$(npx -p @semantic-release/changelog -p @semantic-release/git -p semantic-release@19.0.2 semantic-release --no-ci --dry-run)"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Print earlybird next version
