@@ -1,3 +1,10 @@
+## [2.1.2](https://github.com/grinish21/earlybird/compare/v2.1.1...v2.1.2) (2022-09-07)
+
+
+### Bug Fixes
+
+* issue with bash command to get version ([0d21ad0](https://github.com/grinish21/earlybird/commit/0d21ad071740934e7b46e2e1dddefbe0d079c982))
+
 ## [2.1.1](https://github.com/grinish21/earlybird/compare/v2.1.0...v2.1.1) (2022-09-07)
 
 
