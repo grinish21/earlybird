@@ -1,3 +1,12 @@
+## [2.1.1](https://github.com/grinish21/earlybird/compare/v2.1.0...v2.1.1) (2022-09-07)
+
+
+### Bug Fixes
+
+* issue with get version ([e7db7db](https://github.com/grinish21/earlybird/commit/e7db7dba8256772f55e5bc74022e072c1f57503d))
+* issue with semantic release ([ead721c](https://github.com/grinish21/earlybird/commit/ead721c2281711a74bbd603cbfebb3975f17081d))
+* missing double quotes on the command ([71e6389](https://github.com/grinish21/earlybird/commit/71e63892ae34d182cbccde2a89c89399ba28d293))
+
 # [2.1.0](https://github.com/grinish21/earlybird/compare/v2.0.3...v2.1.0) (2022-09-07)
 
 
