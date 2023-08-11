@@ -17,10 +17,6 @@ build.bat && install.bat
 ```
 
 ## Usage
-To launch a basic EarlyBird scan against a directory:
-```
-$ go-earlybird --path=/path/to/directory
-```
 ```
 $ go-earlybird.exe --path=C:\path\to\directory
 ```
